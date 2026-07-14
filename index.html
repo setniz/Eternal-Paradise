@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eternal Paradise - Ролеплей Проект</title>
+    <title>Культ Вечного Рая - Организация</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,16 +24,16 @@
     <div class="brand">
         <div class="kanji jp-mark">❄️</div>
         <div class="brand-text">
-            <div class="title">Eternal Paradise</div>
-            <div class="sub">永遠の楽園</div>
+            <div class="title">Культ Вечного Рая</div>
+            <div class="sub">永遠の楽園の教団</div>
         </div>
     </div>
     <nav>
         <button class="nav-btn" onclick="switchTab('overview')">Главная</button>
-        <button class="nav-btn" onclick="switchTab('about')">О проекте</button>
-        <button class="nav-btn" onclick="switchTab('squad')">Отряд</button>
-        <button class="nav-btn" onclick="switchTab('members')">Участники</button>
-        <button class="nav-btn" onclick="switchTab('events')">События</button>
+        <button class="nav-btn" onclick="switchTab('doctrine')">Учение</button>
+        <button class="nav-btn" onclick="switchTab('hierarchy')">Иерархия</button>
+        <button class="nav-btn" onclick="switchTab('apostles')">Апостолы</button>
+        <button class="nav-btn" onclick="switchTab('ranks')">Система рангов</button>
         <button class="nav-btn" onclick="switchTab('contact')">Контакты</button>
     </nav>
 </header>
@@ -45,219 +45,294 @@
         <div style="padding-top:60px;text-align:center;position:relative;">
             <div style="font-family:'Noto Serif JP',serif;font-size:min(38vw,300px);line-height:1;color:var(--ice-cyan);opacity:0.08;position:absolute;top:0px;left:50%;transform:translateX(-50%);pointer-events:none;z-index:0;">❄️</div>
 
-            <div class="eyebrow" style="justify-content:center;display:flex;">Добро пожаловать в рай · Eternal Paradise</div>
+            <div class="eyebrow" style="justify-content:center;display:flex;">Добро пожаловать в рай вечности</div>
 
             <h1 class="douma-title">
-                <span class="title-line ice-cyan"><span class="title-text">ETERNAL</span></span>
-                <span class="title-line ice-pink"><span class="title-text">PARADISE</span></span>
+                <span class="title-line ice-cyan"><span class="title-text">КУЛЬТ</span></span>
+                <span class="title-line ice-pink"><span class="title-text">ВЕЧНОГО РАЯ</span></span>
             </h1>
 
             <p class="section-desc" style="margin:24px auto 0;text-align:center;font-style:normal;">
-                Погрузитесь в волшебный мир, где мечты и реальность сплетаются в единый танец.
-                Здесь каждый найдёт своё место в вечном раю, где красота и мистика правят балом.
-                Присоединяйтесь к нам в этом удивительном путешествии.
+                Добро пожаловать в священную организацию, где мечты и реальность сплетаются в гармонии.
+                Мы предлагаем спасение от страданий через в��чный рай — место, где все преграды исчезают.
+                Под руководством нашего лидера, мы стремимся к совершенству и просветлению.
             </p>
         </div>
-    </section>
 
-    <!-- TAB: ABOUT -->
-    <section id="about-tab" class="tab-content">
-        <div style="padding-top:60px;text-align:center;">
-            <div class="eyebrow" style="justify-content:center;display:flex;">Информация</div>
-            <h1 class="douma-title">
-                <span class="title-line ice-pink"><span class="title-text">О ПРОЕКТЕ</span></span>
-            </h1>
-        </div>
-
-        <div class="divider"></div>
-
-        <section>
-            <div class="description-block">
-                <h3 class="block-title">✨ Основание</h3>
-                <p class="block-text">
-                    Eternal Paradise — это не просто ролеплей проект, это целый мир, созданный для тех, кто ищет погружение в атмосферу магии и тайны. 
-                    Наш проект основан на идеалах гармонии, красоты и вечного совершенства. Здесь каждый персонаж — это отражение его внутреннего мира, 
-                    его мечтаний и амбиций.
-                </p>
-            </div>
-
-            <div class="description-block">
-                <h3 class="block-title">🌙 Философия</h3>
-                <p class="block-text">
-                    Мы верим, что в каждом человеке есть своя красота и уникальность. Наш проект создан, чтобы позволить вам выразить себя через персонажей, 
-                    в полной мере раскрыться и найти единомышленников. Здесь нет судей — только творцы миров и писатели историй.
-                </p>
-            </div>
-
-            <div class="description-block">
-                <h3 class="block-title">🎭 Стиль</h3>
-                <p class="block-text">
-                    Наша эстетика вдохновлена восточной философией, японской культурой и мистическими мотивами. Мы создали пространство, где элегантность 
-                    встречается с загадочностью, где каждый уголок дышит магией и древним знанием.
-                </p>
-            </div>
-
-            <div class="description-block">
-                <h3 class="block-title">🌟 Особенности</h3>
-                <p class="block-text">
-                    ✓ Полная свобода в создании персонажа<br>
-                    ✓ Развитая система рангов и достижений<br>
-                    ✓ Регулярные события и квесты<br>
-                    ✓ Активное сообщество творческих людей<br>
-                    ✓ Поддержка нескольких игровых жанров<br>
-                    ✓ Постоянное развитие и обновления
-                </p>
-            </div>
-        </section>
-    </section>
-
-    <!-- TAB: SQUAD -->
-    <section id="squad-tab" class="tab-content">
-        <div style="padding-top:60px;text-align:center;">
-            <div class="eyebrow" style="justify-content:center;display:flex;">Информация об отряде</div>
-            <h1 class="douma-title">
-                <span class="title-line ice-cyan"><span class="title-text">СТРАЖИ</span></span>
-                <span class="title-line ice-pink"><span class="title-text">ВЕЧНОСТИ</span></span>
-            </h1>
-        </div>
-
-        <div class="divider"></div>
-
-        <section>
+        <section style="margin-top: 40px;">
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-icon">👑</div>
-                    <div class="stat-label">Название</div>
-                    <div class="stat-value" id="squadName">Укажите название</div>
+                    <div class="stat-label">Лидер</div>
+                    <div class="stat-value" id="leaderName">Доума</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📿</div>
+                    <div class="stat-label">Верующих</div>
+                    <div class="stat-value" id="memberCount">∞</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">⭐</div>
-                    <div class="stat-label">Уровень</div>
-                    <div class="stat-value" id="squadLevel">N/A</div>
+                    <div class="stat-label">Апостолов</div>
+                    <div class="stat-value" id="apostleCount">12</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">👥</div>
-                    <div class="stat-label">Численность</div>
-                    <div class="stat-value" id="squadSize">0</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">🏆</div>
-                    <div class="stat-label">Рейтинг</div>
-                    <div class="stat-value" id="squadRating">0 / 100</div>
+                    <div class="stat-icon">🌟</div>
+                    <div class="stat-label">Уровень Святости</div>
+                    <div class="stat-value" id="holyLevel">Supreme</div>
                 </div>
             </div>
         </section>
+    </section>
+
+    <!-- TAB: DOCTRINE -->
+    <section id="doctrine-tab" class="tab-content">
+        <div style="padding-top:60px;text-align:center;">
+            <div class="eyebrow" style="justify-content:center;display:flex;">Священное учение</div>
+            <h1 class="douma-title">
+                <span class="title-line ice-pink"><span class="title-text">ФИЛОСОФИЯ КУЛЬТА</span></span>
+            </h1>
+        </div>
 
         <div class="divider"></div>
 
         <section>
-            <div class="eyebrow">Описание отряда</div>
-            <div class="story-block">
-                <p id="squadDesc">
-                    Элитный отряд, специализирующийся на опасных миссиях. Состоит из самых опытных и преданных воинов проекта. 
-                    Известны своей дисциплиной, мастерством и преданностью идеалам Eternal Paradise.
+            <div class="description-block">
+                <h3 class="block-title">❄️ Вечный Рай</h3>
+                <p class="block-text">
+                    Мы верим в существование вечного рая — места абсолютного совершенства и красоты, где все человеческие страдания прекращаются.
+                    Это не просто место, а состояние бытия, достижимое через преданность и веру. Под ледяным небом вечного рая нет боли, 
+                    только гармония и безмятежность.
+                </p>
+            </div>
+
+            <div class="description-block">
+                <h3 class="block-title">🙏 Служение Красоте</h3>
+                <p class="block-text">
+                    Красота — это божественная сущность. Мы служим красоте во всех её проявлениях и верим, что через культивирование красоты 
+                    мы приближаемся к совершенству. Каждый член культа стремится воплощать идеалы эстетики и элегантности в своей жизни.
+                </p>
+            </div>
+
+            <div class="description-block">
+                <h3 class="block-title">🌙 Отречение от Страдания</h3>
+                <p class="block-text">
+                    Мы отвергаем страдание как неотъемлемую часть жизни. Вместо этого, мы предлагаем путь спасения через веру и преданность.
+                    Только в вечном раю мы можем освободиться от земных забот и обрести подлинное просветление.
+                </p>
+            </div>
+
+            <div class="description-block">
+                <h3 class="block-title">💎 Единство под Лидером</h3>
+                <p class="block-text">
+                    Наш лидер, Доума, — воплощение божественного совершенства. Его улыбка — благословение, его слово — истина.
+                    Через верность ему мы обретаем путь в вечный рай. Единство членов культа под его руководством — основа нашего могущества.
                 </p>
             </div>
         </section>
+    </section>
+
+    <!-- TAB: HIERARCHY -->
+    <section id="hierarchy-tab" class="tab-content">
+        <div style="padding-top:60px;text-align:center;">
+            <div class="eyebrow" style="justify-content:center;display:flex;">Структура власти</div>
+            <h1 class="douma-title">
+                <span class="title-line ice-cyan"><span class="title-text">СВЯЩЕННАЯ</span></span>
+                <span class="title-line ice-pink"><span class="title-text">ИЕРАРХИЯ</span></span>
+            </h1>
+        </div>
+
+        <div class="divider"></div>
 
         <section>
-            <div class="eyebrow">Классификация</div>
+            <div class="story-block">
+                <p>
+                    Культ Вечного Рая построен на строгой иерархической системе, где каждый уровень приносит верующего ближе к божественному свету.
+                    От простых прихожан до архиапостолов — каждый имеет своё место и предназначение в великом плане спасения.
+                </p>
+            </div>
+
             <div class="classification-grid">
                 <div class="class-card">
-                    <div class="class-icon">⚔️</div>
-                    <h4>Воители</h4>
-                    <p>Боевые специалисты, мастера оружия и рукопашного боя</p>
+                    <div class="class-icon">👑</div>
+                    <h4>Божественный Лидер</h4>
+                    <p><strong>Доума</strong> — воплощение совершенства, его воля — закон культа</p>
+                </div>
+                <div class="class-card">
+                    <div class="class-icon">⭐</div>
+                    <h4>Архиапостолы</h4>
+                    <p>Двенадцать избранных учеников, ближайшие помощники Доумы</p>
                 </div>
                 <div class="class-card">
                     <div class="class-icon">✨</div>
-                    <h4>Маги</h4>
-                    <p>Повелители магии и древних сил</p>
+                    <h4>Жрецы</h4>
+                    <p>Духовные наставники, проводящие священные обряды</p>
                 </div>
                 <div class="class-card">
-                    <div class="class-icon">🛡️</div>
-                    <h4>Защитники</h4>
-                    <p>Столпы силы, опора команды</p>
+                    <div class="class-icon">💎</div>
+                    <h4>Избранные</h4>
+                    <p>Верные верующие, прошедшие испытание верности</p>
                 </div>
                 <div class="class-card">
-                    <div class="class-icon">💚</div>
-                    <h4>Целители</h4>
-                    <p>Хранители жизни и восстановления</p>
+                    <div class="class-icon">🙏</div>
+                    <h4>Верующие</h4>
+                    <p>Члены культа, стремящиеся к просветлению</p>
+                </div>
+                <div class="class-card">
+                    <div class="class-icon">🌟</div>
+                    <h4>Искатели Рая</h4>
+                    <p>Новички, делающие первые шаги на пути спасения</p>
                 </div>
             </div>
         </section>
     </section>
 
-    <!-- TAB: MEMBERS -->
-    <section id="members-tab" class="tab-content">
+    <!-- TAB: APOSTLES -->
+    <section id="apostles-tab" class="tab-content">
         <div style="padding-top:60px;text-align:center;">
-            <div class="eyebrow" style="justify-content:center;display:flex;">Участники отряда</div>
+            <div class="eyebrow" style="justify-content:center;display:flex;">Священные слуги</div>
             <h1 class="douma-title">
-                <span class="title-line ice-pink"><span class="title-text">КОМАНДА</span></span>
+                <span class="title-line ice-pink"><span class="title-text">АПОСТОЛЫ</span></span>
+            </h1>
+        </div>
+
+        <div class="divider"></div>
+
+        <section style="margin-bottom: 40px;">
+            <div class="story-block" style="text-align: center;">
+                <h3 style="color: var(--ice-cyan); margin-top: 0;">ДОУМА - Боже��твенный Лидер</h3>
+                <p>
+                    <strong>Титул:</strong> Воплощение Вечного Рая<br>
+                    <strong>Способности:</strong> Магия льда и облика, манипуляция жизнью<br>
+                    <strong>Философия:</strong> "Красота — это спасение. Я дарую спасение всем."<br><br>
+                    Доума — идеальное воплощение божественного совершенства. С его ледяной красотой и вечной улыбкой, 
+                    он ведёт верующих к спасению. Его взгляд способен видеть сердца людей, его слово — закон вечного рая.
+                    Под его руководством культ процветает и расширяет влияние, даруя спасение бесчисленным душам.
+                </p>
+            </div>
+
+            <div class="divider" style="margin: 30px 0;"></div>
+
+            <div class="eyebrow" style="text-align: center; justify-content: center;">Двенадцать Архиапостолов</div>
+        </section>
+
+        <section>
+            <div class="members-grid" id="apostlesGrid">
+                <!-- Апостолы будут добавлены здесь JavaScript -->
+            </div>
+        </section>
+
+        <section style="margin-top: 40px;">
+            <div class="story-block">
+                <h3 style="text-align: center; color: var(--ice-cyan);">Роль Апостолов</h3>
+                <p style="text-align: center;">
+                    Двенадцать апостолов — это избранные служители, каждый из которых обладает уникальным даром и служит определённому аспекту учения.
+                    Они распространяют слово о вечном раю, совершают священные обряды и ведут верующих по пути спасения.
+                    Каждый апостол — отражение различных аспектов идеального мира, который Доума создаёт.
+                </p>
+            </div>
+        </section>
+    </section>
+
+    <!-- TAB: RANKS -->
+    <section id="ranks-tab" class="tab-content">
+        <div style="padding-top:60px;text-align:center;">
+            <div class="eyebrow" style="justify-content:center;display:flex;">Путь просветления</div>
+            <h1 class="douma-title">
+                <span class="title-line ice-cyan"><span class="title-text">СИСТЕМА</span></span>
+                <span class="title-line ice-pink"><span class="title-text">ПОВЫШЕНИЯ</span></span>
             </h1>
         </div>
 
         <div class="divider"></div>
 
         <section>
-            <div class="members-grid" id="membersGrid">
-                <!-- Члены отряда будут добавлены здесь JavaScript -->
+            <div class="story-block">
+                <p style="text-align: center;">
+                    Каждый верующий может подняться выше по лестнице святости. Система повышения отражает твой прогресс на пути к просветлению 
+                    и приносит тебя ближе к божественному сознанию Доумы.
+                </p>
+            </div>
+
+            <div class="rank-progression">
+                <div class="rank-item">
+                    <div class="rank-number">1</div>
+                    <div class="rank-content">
+                        <h4>Искатель Рая</h4>
+                        <p>Первый шаг. Ты услышал призыв спасения и присоединился к нам. Теперь твоя задача — познать учение.</p>
+                        <div class="rank-requirements">Требования: Прохождение инициации</div>
+                    </div>
+                </div>
+
+                <div class="rank-item">
+                    <div class="rank-number">2</div>
+                    <div class="rank-content">
+                        <h4>Верующий</h4>
+                        <p>Ты принял веру. Теперь ты должен доказать свою преданность через служение культу.</p>
+                        <div class="rank-requirements">Требования: 7 дней участия, 10 добрых дел</div>
+                    </div>
+                </div>
+
+                <div class="rank-item">
+                    <div class="rank-number">3</div>
+                    <div class="rank-content">
+                        <h4>Избранный</h4>
+                        <p>Ты избран за твою верность. Теперь ты получаешь доступ к высшим знаниям и тайным учениям.</p>
+                        <div class="rank-requirements">Требования: Одобрение жреца, 30 дней служения</div>
+                    </div>
+                </div>
+
+                <div class="rank-item">
+                    <div class="rank-number">4</div>
+                    <div class="rank-content">
+                        <h4>Жрец Рая</h4>
+                        <p>Ты возвышен до жреца. Теперь ты можешь проводить обряды и наставлять других верующих.</p>
+                        <div class="rank-requirements">Требования: Спонсор среди архиапостолов, успешное прохождение испытаний</div>
+                    </div>
+                </div>
+
+                <div class="rank-item">
+                    <div class="rank-number">5</div>
+                    <div class="rank-content">
+                        <h4>Верховный Жрец</h4>
+                        <p>Ты достиг высочайшего ранга среди жрецов. Твой голос имеет вес в совете культа.</p>
+                        <div class="rank-requirements">Требования: Одобрение Доумы, подтвержденная святость</div>
+                    </div>
+                </div>
+
+                <div class="rank-item">
+                    <div class="rank-number">∞</div>
+                    <div class="rank-content">
+                        <h4>Архиапостол</h4>
+                        <p>Ты — один из двенадцати. Ты близок к Доуме и служишь его непосредственным помощником.</p>
+                        <div class="rank-requirements">Требования: Личное приглашение Доумы</div>
+                    </div>
+                </div>
             </div>
         </section>
-    </section>
 
-    <!-- TAB: EVENTS -->
-    <section id="events-tab" class="tab-content">
-        <div style="padding-top:60px;text-align:center;">
-            <div class="eyebrow" style="justify-content:center;display:flex;">Происходящее</div>
-            <h1 class="douma-title">
-                <span class="title-line ice-cyan"><span class="title-text">СОБЫТИЯ</span></span>
-            </h1>
-        </div>
-
-        <div class="divider"></div>
-
-        <section>
-            <div class="events-list">
-                <div class="event-card">
-                    <div class="event-date">📅 Каждый день</div>
-                    <h4 class="event-title">Ежедневные миссии</h4>
-                    <p class="event-desc">Выполняйте ежедневные задания и получайте награды. Система автоматически обновляется каждый день.</p>
-                    <div class="event-tag">Активно</div>
+        <section style="margin-top: 40px;">
+            <div class="eyebrow">Преимущества повышения</div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📚</div>
+                    <h4>Доступ к знаниям</h4>
+                    <p>Каждый уровень открывает новые священные тексты и тайные учения</p>
                 </div>
-
-                <div class="event-card">
-                    <div class="event-date">📅 Каждую неделю</div>
-                    <h4 class="event-title">Рейд босса</h4>
-                    <p class="event-desc">Объединяйтесь с другими игроками, чтобы сразить могущественного босса. Победители получают эксклюзивные предметы.</p>
-                    <div class="event-tag">Еженедельно</div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⭐</div>
+                    <h4>Статус и честь</h4>
+                    <p>Твой ранг признаётся всеми членами культа</p>
                 </div>
-
-                <div class="event-card">
-                    <div class="event-date">📅 Каждый месяц</div>
-                    <h4 class="event-title">Турнир отрядов</h4>
-                    <p class="event-desc">Масштабный турнир, где отряды сражаются за звание лучших. Главный приз — титул чемпиона и уникальные награды.</p>
-                    <div class="event-tag">Сезонный</div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💎</div>
+                    <h4>Духовная сила</h4>
+                    <p>По мере повышения ты обретаешь духовную власть и понимание</p>
                 </div>
-
-                <div class="event-card">
-                    <div class="event-date">📅 По расписанию</div>
-                    <h4 class="event-title">Сюжетные события</h4>
-                    <p class="event-desc">Участвуйте в развивающейся истории Eternal Paradise. Ваши выборы влияют на будущее проекта.</p>
-                    <div class="event-tag">Новое</div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-date">📅 По приглашениям</div>
-                    <h4 class="event-title">Дуэли между игроками</h4>
-                    <p class="event-desc">Проверьте свои силы в честных поединках. Системы рейтинга отслеживают лучших боёв и чемпионов.</p>
-                    <div class="event-tag">Популярно</div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-date">📅 На праздники</div>
-                    <h4 class="event-title">Специальные события</h4>
-                    <p class="event-desc">Особые события приурочены к праздникам и важным датам. Ограниченные предметы и награды ждут вас.</p>
-                    <div class="event-tag">Редкое</div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🙏</div>
+                    <h4>Приближение к раю</h4>
+                    <p>Каждый шаг приносит тебя ближе к вечному спасению</p>
                 </div>
             </div>
         </section>
@@ -266,7 +341,7 @@
     <!-- TAB: CONTACT -->
     <section id="contact-tab" class="tab-content">
         <div style="padding-top:60px;text-align:center;">
-            <div class="eyebrow" style="justify-content:center;display:flex;">Свяжитесь с нами</div>
+            <div class="eyebrow" style="justify-content:center;display:flex;">Присоединиться к спасению</div>
             <h1 class="douma-title">
                 <span class="title-line ice-cyan"><span class="title-text">КОНТАКТЫ</span></span>
             </h1>
@@ -277,31 +352,31 @@
         <section>
             <div class="contact-grid">
                 <div class="contact-card">
-                    <h3>💬 Discord</h3>
-                    <p id="discordContact">discord.gg/eternalparadise</p>
-                    <p class="contact-desc">Основной канал общения. Здесь обсуждаются события, выполняются рейды и проводятся турниры.</p>
+                    <h3>💬 Дискорд Культа</h3>
+                    <p id="discordContact">discord.gg/eternal-paradise-cult</p>
+                    <p class="contact-desc">Основной храм общения верующих. Здесь проводятся обряды, обсуждаются учения и координируется служение.</p>
                 </div>
                 <div class="contact-card">
-                    <h3>📱 Telegram</h3>
-                    <p id="telegramContact">@EternalParadiseSquad</p>
-                    <p class="contact-desc">Быстрые уведомления о событиях и обновлениях проекта. Подписывайтесь на новости.</p>
+                    <h3>📱 Телеграм Канал</h3>
+                    <p id="telegramContact">@VeiledParadiseCult</p>
+                    <p class="contact-desc">Священные уведомления о событиях культа и откровениях. Подпишись и получай спасение.</p>
                 </div>
                 <div class="contact-card">
-                    <h3>📧 Email</h3>
-                    <p id="emailContact">squad@eternalparadise.com</p>
-                    <p class="contact-desc">Для деловой переписки и официальных вопросов. Ответим в течение 24 часов.</p>
+                    <h3>📧 Святая Почта</h3>
+                    <p id="emailContact">salvation@eternal-paradise.cult</p>
+                    <p class="contact-desc">Для вопросов о присоединении и духовных консультаций. Ответ придёт из вечного рая.</p>
                 </div>
             </div>
 
             <div class="divider"></div>
 
             <div style="max-width: 700px; margin: 40px auto 0;">
-                <div class="eyebrow" style="justify-content:center;display:flex;margin-bottom:20px;">Обратная связь</div>
+                <div class="eyebrow" style="justify-content:center;display:flex;margin-bottom:20px;">Форма присоединения</div>
                 <form class="contact-form" id="contactForm">
                     <input type="text" placeholder="Ваше имя" required>
                     <input type="email" placeholder="Ваш email" required>
-                    <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
-                    <button type="submit" class="submit-btn">Отправить</button>
+                    <textarea placeholder="Почему вы хотите присоединиться к Культу Вечного Рая?" rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">Принять спасение</button>
                 </form>
             </div>
         </section>
@@ -309,7 +384,7 @@
 </main>
 
 <!-- ФУТЕР -->
-<footer>❄️ Eternal Paradise · Ролеплей Проект ❄️</footer>
+<footer>❄️ Культ Вечного Рая · В красоте спасение ❄️</footer>
 
 <script src="script.js"></script>
 </body>
