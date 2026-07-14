@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternal Paradise - Информация об отряде</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <h1 class="logo">Eternal Paradise</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#about" class="nav-link">О проекте</a></li>
+                    <li><a href="#squad" class="nav-link">Отряд</a></li>
+                    <li><a href="#members" class="nav-link">Участники</a></li>
+                    <li><a href="#contact" class="nav-link">Контакты</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Главный баннер -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Добро пожаловать в Eternal Paradise</h2>
+            <p>Ролеплей проект нового поколения</p>
+            <button class="btn btn-primary" onclick="scrollToSection('squad')">Узнать больше</button>
+        </div>
+    </section>
+
+    <!-- О проекте -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">О проекте</h2>
+            <div class="about-content">
+                <p>
+                    Eternal Paradise — это уникальный ролеплей проект, объединяющий игроков со всего мира. 
+                    Наш проект создан для того, чтобы предоставить увлекательный и погружающий опыт игры.
+                </p>
+                <p>
+                    Мы стремимся создать динамичный мир, где каждый игрок может найти свое место и развивать 
+                    свою историю. Проект постоянно развивается и совершенствуется благодаря вкладу нашего сообщества.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Информация об отряде -->
+    <section id="squad" class="section squad">
+        <div class="container">
+            <h2 class="section-title">Информация об отряде</h2>
+            <div class="squad-grid">
+                <div class="squad-card">
+                    <h3>Название отряда</h3>
+                    <p class="squad-value" id="squadName">Укажите название</p>
+                </div>
+                <div class="squad-card">
+                    <h3>Уровень</h3>
+                    <p class="squad-value" id="squadLevel">N/A</p>
+                </div>
+                <div class="squad-card">
+                    <h3>Численность</h3>
+                    <p class="squad-value" id="squadSize">0</p>
+                </div>
+                <div class="squad-card">
+                    <h3>Рейтинг</h3>
+                    <p class="squad-value" id="squadRating">0 / 100</p>
+                </div>
+            </div>
+            <div class="squad-description">
+                <h3>Описание отряда</h3>
+                <p id="squadDesc">Добавьте описание вашего отряда</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Участники -->
+    <section id="members" class="section members">
+        <div class="container">
+            <h2 class="section-title">Участники отряда</h2>
+            <div class="members-grid" id="membersGrid">
+                <!-- Члены отряда будут добавлены здесь JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Свяжитесь с нами</h3>
+                    <p><strong>Discord:</strong> <span id="discordContact">Не указан</span></p>
+                    <p><strong>Telegram:</strong> <span id="telegramContact">Не указан</span></p>
+                    <p><strong>Email:</strong> <span id="emailContact">Не указан</span></p>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="Ваш email" required>
+                    <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Eternal Paradise. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Discord</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">VK</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
