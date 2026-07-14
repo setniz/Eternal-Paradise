@@ -3,37 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eternal Paradise - Информация об отряде</title>
+    <title>Eternal Paradise - Ролеплей Проект</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- ФОНОВЫЕ ЭФФЕКТЫ -->
-<div class="p3-bg">
-    <div class="water-surface"></div>
-    <div class="water-glow"></div>
-    
-    <div class="p3-shard shard-pink" style="left: 15%; top: 60%; --size: 18px; --delay: 0s; --dur: 7s;"></div>
-    <div class="p3-shard shard-blue" style="left: 25%; top: 30%; --size: 24px; --delay: -2s; --dur: 9s;"></div>
-    <div class="p3-shard shard-purple" style="left: 45%; top: 75%; --size: 14px; --delay: -4s; --dur: 6s;"></div>
-    <div class="p3-shard shard-pink" style="left: 65%; top: 20%; --size: 22px; --delay: -1s; --dur: 11s;"></div>
-    <div class="p3-shard shard-blue" style="left: 80%; top: 55%; --size: 16px; --delay: -5s; --dur: 8s;"></div>
-    <div class="p3-shard shard-purple" style="left: 90%; top: 15%; --size: 28px; --delay: -3s; --dur: 12s;"></div>
+<!-- ЛЕДЯНОЙ ФОН -->
+<div class="douma-bg">
+    <div class="ice-flake ice-1"></div>
+    <div class="ice-flake ice-2"></div>
+    <div class="ice-flake ice-3"></div>
+    <div class="ice-flake ice-4"></div>
+    <div class="ice-flake ice-5"></div>
+    <div class="ice-flake ice-6"></div>
+    <div class="aurora"></div>
 </div>
 
 <!-- ХЭДЕР -->
 <header>
     <div class="brand">
-        <div class="kanji jp-mark">魔</div>
+        <div class="kanji jp-mark">❄️</div>
         <div class="brand-text">
             <div class="title">Eternal Paradise</div>
-            <div class="sub">エターナル・パラダイス</div>
+            <div class="sub">永遠の楽園</div>
         </div>
     </div>
     <nav>
-        <button class="nav-btn" onclick="switchTab('overview')">Обзор</button>
+        <button class="nav-btn" onclick="switchTab('overview')">Главная</button>
+        <button class="nav-btn" onclick="switchTab('about')">О проекте</button>
         <button class="nav-btn" onclick="switchTab('squad')">Отряд</button>
         <button class="nav-btn" onclick="switchTab('members')">Участники</button>
+        <button class="nav-btn" onclick="switchTab('events')">События</button>
         <button class="nav-btn" onclick="switchTab('contact')">Контакты</button>
     </nav>
 </header>
@@ -43,30 +43,70 @@
     <!-- TAB: OVERVIEW -->
     <section id="overview-tab" class="tab-content active">
         <div style="padding-top:60px;text-align:center;position:relative;">
-            <div style="font-family:'Noto Serif JP',serif;font-size:min(38vw,300px);line-height:1;color:var(--cyan);opacity:0.06;position:absolute;top:0px;left:50%;transform:translateX(-50%);pointer-events:none;z-index:0;">∞</div>
+            <div style="font-family:'Noto Serif JP',serif;font-size:min(38vw,300px);line-height:1;color:var(--ice-cyan);opacity:0.08;position:absolute;top:0px;left:50%;transform:translateX(-50%);pointer-events:none;z-index:0;">❄️</div>
 
-            <div class="eyebrow" style="justify-content:center;display:flex;">Ролеплей Проект · Eternal Paradise</div>
+            <div class="eyebrow" style="justify-content:center;display:flex;">Добро пожаловать в рай · Eternal Paradise</div>
 
-            <h1 class="p3-title">
-                <span class="p3-line p3-cyan"><span class="p3-text">ETERNAL</span></span>
-                <span class="p3-line p3-pink"><span class="p3-text">PARADISE</span></span>
+            <h1 class="douma-title">
+                <span class="title-line ice-cyan"><span class="title-text">ETERNAL</span></span>
+                <span class="title-line ice-pink"><span class="title-text">PARADISE</span></span>
             </h1>
 
             <p class="section-desc" style="margin:24px auto 0;text-align:center;font-style:normal;">
-                Добро пожаловать в Eternal Paradise — уникальный ролеплей проект нового поколения.
-                Мы создали динамичный мир, где каждый игрок может найти своё место и развивать собственную историю.
-                Проект постоянно развивается благодаря вкладу нашего талантливого сообщества.
+                Погрузитесь в волшебный мир, где мечты и реальность сплетаются в единый танец.
+                Здесь каждый найдёт своё место в вечном раю, где красота и мистика правят балом.
+                Присоединяйтесь к нам в этом удивительном путешествии.
             </p>
+        </div>
+    </section>
+
+    <!-- TAB: ABOUT -->
+    <section id="about-tab" class="tab-content">
+        <div style="padding-top:60px;text-align:center;">
+            <div class="eyebrow" style="justify-content:center;display:flex;">Информация</div>
+            <h1 class="douma-title">
+                <span class="title-line ice-pink"><span class="title-text">О ПРОЕКТЕ</span></span>
+            </h1>
         </div>
 
         <div class="divider"></div>
 
         <section>
-            <div class="eyebrow">О проекте</div>
-            <div class="p3-textblock p3-textblock-left">
-                Eternal Paradise объединяет игроков со всего мира в единый ролеплей-мир, 
-                где каждая история имеет значение. Мы стремимся создать погружающий опыт, 
-                полный интересных событий и возможностей для развития персонажей.
+            <div class="description-block">
+                <h3 class="block-title">✨ Основание</h3>
+                <p class="block-text">
+                    Eternal Paradise — это не просто ролеплей проект, это целый мир, созданный для тех, кто ищет погружение в атмосферу магии и тайны. 
+                    Наш проект основан на идеалах гармонии, красоты и вечного совершенства. Здесь каждый персонаж — это отражение его внутреннего мира, 
+                    его мечтаний и амбиций.
+                </p>
+            </div>
+
+            <div class="description-block">
+                <h3 class="block-title">🌙 Философия</h3>
+                <p class="block-text">
+                    Мы верим, что в каждом человеке есть своя красота и уникальность. Наш проект создан, чтобы позволить вам выразить себя через персонажей, 
+                    в полной мере раскрыться и найти единомышленников. Здесь нет судей — только творцы миров и писатели историй.
+                </p>
+            </div>
+
+            <div class="description-block">
+                <h3 class="block-title">🎭 Стиль</h3>
+                <p class="block-text">
+                    Наша эстетика вдохновлена восточной философией, японской культурой и мистическими мотивами. Мы создали пространство, где элегантность 
+                    встречается с загадочностью, где каждый уголок дышит магией и древним знанием.
+                </p>
+            </div>
+
+            <div class="description-block">
+                <h3 class="block-title">🌟 Особенности</h3>
+                <p class="block-text">
+                    ✓ Полная свобода в создании персонажа<br>
+                    ✓ Развитая система рангов и достижений<br>
+                    ✓ Регулярные события и квесты<br>
+                    ✓ Активное сообщество творческих людей<br>
+                    ✓ Поддержка нескольких игровых жанров<br>
+                    ✓ Постоянное развитие и обновления
+                </p>
             </div>
         </section>
     </section>
@@ -75,31 +115,35 @@
     <section id="squad-tab" class="tab-content">
         <div style="padding-top:60px;text-align:center;">
             <div class="eyebrow" style="justify-content:center;display:flex;">Информация об отряде</div>
-            <h1 class="p3-title">
-                <span class="p3-line p3-cyan"><span class="p3-text">СТРАЖИ</span></span>
-                <span class="p3-line p3-pink"><span class="p3-text">ВЕЧНОСТИ</span></span>
+            <h1 class="douma-title">
+                <span class="title-line ice-cyan"><span class="title-text">СТРАЖИ</span></span>
+                <span class="title-line ice-pink"><span class="title-text">ВЕЧНОСТИ</span></span>
             </h1>
         </div>
 
         <div class="divider"></div>
 
         <section>
-            <div class="forms-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
-                <div class="form-card">
-                    <div class="form-head"><strong>Название:</strong> <span id="squadName">Укажите название</span></div>
-                    <p class="form-desc">Официальное наименование вашего отряда в проекте.</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👑</div>
+                    <div class="stat-label">Название</div>
+                    <div class="stat-value" id="squadName">Укажите название</div>
                 </div>
-                <div class="form-card">
-                    <div class="form-head"><strong>Уровень:</strong> <span id="squadLevel">N/A</span></div>
-                    <p class="form-desc">Текущий уровень развития отряда в иерархии.</p>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-label">Уровень</div>
+                    <div class="stat-value" id="squadLevel">N/A</div>
                 </div>
-                <div class="form-card">
-                    <div class="form-head"><strong>Численность:</strong> <span id="squadSize">0</span></div>
-                    <p class="form-desc">Количество активных участников отряда.</p>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-label">Численность</div>
+                    <div class="stat-value" id="squadSize">0</div>
                 </div>
-                <div class="form-card">
-                    <div class="form-head"><strong>Рейтинг:</strong> <span id="squadRating">0 / 100</span></div>
-                    <p class="form-desc">Общий рейтинг отряда среди других групп.</p>
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-label">Рейтинг</div>
+                    <div class="stat-value" id="squadRating">0 / 100</div>
                 </div>
             </div>
         </section>
@@ -108,11 +152,37 @@
 
         <section>
             <div class="eyebrow">Описание отряда</div>
-            <div class="p3-textblock p3-textblock-left" style="max-width: 100%;">
-                <p id="squadDesc" style="margin: 0; line-height: 1.8;">
+            <div class="story-block">
+                <p id="squadDesc">
                     Элитный отряд, специализирующийся на опасных миссиях. Состоит из самых опытных и преданных воинов проекта. 
                     Известны своей дисциплиной, мастерством и преданностью идеалам Eternal Paradise.
                 </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="eyebrow">Классификация</div>
+            <div class="classification-grid">
+                <div class="class-card">
+                    <div class="class-icon">⚔️</div>
+                    <h4>Воители</h4>
+                    <p>Боевые специалисты, мастера оружия и рукопашного боя</p>
+                </div>
+                <div class="class-card">
+                    <div class="class-icon">✨</div>
+                    <h4>Маги</h4>
+                    <p>Повелители магии и древних сил</p>
+                </div>
+                <div class="class-card">
+                    <div class="class-icon">🛡️</div>
+                    <h4>Защитники</h4>
+                    <p>Столпы силы, опора команды</p>
+                </div>
+                <div class="class-card">
+                    <div class="class-icon">💚</div>
+                    <h4>Целители</h4>
+                    <p>Хранители жизни и восстановления</p>
+                </div>
             </div>
         </section>
     </section>
@@ -121,8 +191,8 @@
     <section id="members-tab" class="tab-content">
         <div style="padding-top:60px;text-align:center;">
             <div class="eyebrow" style="justify-content:center;display:flex;">Участники отряда</div>
-            <h1 class="p3-title">
-                <span class="p3-line p3-pink"><span class="p3-text">КОМАНДА</span></span>
+            <h1 class="douma-title">
+                <span class="title-line ice-pink"><span class="title-text">КОМАНДА</span></span>
             </h1>
         </div>
 
@@ -135,49 +205,103 @@
         </section>
     </section>
 
-    <!-- TAB: CONTACT -->
-    <section id="contact-tab" class="tab-content">
+    <!-- TAB: EVENTS -->
+    <section id="events-tab" class="tab-content">
         <div style="padding-top:60px;text-align:center;">
-            <div class="eyebrow" style="justify-content:center;display:flex;">Свяжитесь с нами</div>
-            <h1 class="p3-title">
-                <span class="p3-line p3-cyan"><span class="p3-text">КОНТАКТЫ</span></span>
+            <div class="eyebrow" style="justify-content:center;display:flex;">Происходящее</div>
+            <h1 class="douma-title">
+                <span class="title-line ice-cyan"><span class="title-text">СОБЫТИЯ</span></span>
             </h1>
         </div>
 
         <div class="divider"></div>
 
         <section>
-            <div class="role-grid">
-                <div class="role-panel">
-                    <h3>Discord</h3>
-                    <ul>
-                        <li><a href="#" id="discordContact">discord.gg/eternalparadise</a></li>
-                        <li>Основной канал связи с командой</li>
-                    </ul>
+            <div class="events-list">
+                <div class="event-card">
+                    <div class="event-date">📅 Каждый день</div>
+                    <h4 class="event-title">Ежедневные миссии</h4>
+                    <p class="event-desc">Выполняйте ежедневные задания и получайте награды. Система автоматически обновляется каждый день.</p>
+                    <div class="event-tag">Активно</div>
                 </div>
-                <div class="role-panel">
-                    <h3>Telegram</h3>
-                    <ul>
-                        <li><a href="#" id="telegramContact">@EternalParadiseSquad</a></li>
-                        <li>Быстрая коммуникация в проекте</li>
-                    </ul>
+
+                <div class="event-card">
+                    <div class="event-date">📅 Каждую неделю</div>
+                    <h4 class="event-title">Рейд босса</h4>
+                    <p class="event-desc">Объединяйтесь с другими игроками, чтобы сразить могущественного босса. Победители получают эксклюзивные предметы.</p>
+                    <div class="event-tag">Еженедельно</div>
                 </div>
-                <div class="role-panel">
-                    <h3>Email</h3>
-                    <ul>
-                        <li><a href="mailto:squad@eternalparadise.com" id="emailContact">squad@eternalparadise.com</a></li>
-                        <li>Для официальной переписки</li>
-                    </ul>
+
+                <div class="event-card">
+                    <div class="event-date">📅 Каждый месяц</div>
+                    <h4 class="event-title">Турнир отрядов</h4>
+                    <p class="event-desc">Масштабный турнир, где отряды сражаются за звание лучших. Главный приз — титул чемпиона и уникальные награды.</p>
+                    <div class="event-tag">Сезонный</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">📅 По расписанию</div>
+                    <h4 class="event-title">Сюжетные события</h4>
+                    <p class="event-desc">Участвуйте в развивающейся истории Eternal Paradise. Ваши выборы влияют на будущее проекта.</p>
+                    <div class="event-tag">Новое</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">📅 По приглашениям</div>
+                    <h4 class="event-title">Дуэли между игроками</h4>
+                    <p class="event-desc">Проверьте свои силы в честных поединках. Системы рейтинга отслеживают лучших боёв и чемпионов.</p>
+                    <div class="event-tag">Популярно</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">📅 На праздники</div>
+                    <h4 class="event-title">Специальные события</h4>
+                    <p class="event-desc">Особые события приурочены к праздникам и важным датам. Ограниченные предметы и награды ждут вас.</p>
+                    <div class="event-tag">Редкое</div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- TAB: CONTACT -->
+    <section id="contact-tab" class="tab-content">
+        <div style="padding-top:60px;text-align:center;">
+            <div class="eyebrow" style="justify-content:center;display:flex;">Свяжитесь с нами</div>
+            <h1 class="douma-title">
+                <span class="title-line ice-cyan"><span class="title-text">КОНТАКТЫ</span></span>
+            </h1>
+        </div>
+
+        <div class="divider"></div>
+
+        <section>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>💬 Discord</h3>
+                    <p id="discordContact">discord.gg/eternalparadise</p>
+                    <p class="contact-desc">Основной канал общения. Здесь обсуждаются события, выполняются рейды и проводятся турниры.</p>
+                </div>
+                <div class="contact-card">
+                    <h3>📱 Telegram</h3>
+                    <p id="telegramContact">@EternalParadiseSquad</p>
+                    <p class="contact-desc">Быстрые уведомления о событиях и обновлениях проекта. Подписывайтесь на новости.</p>
+                </div>
+                <div class="contact-card">
+                    <h3>📧 Email</h3>
+                    <p id="emailContact">squad@eternalparadise.com</p>
+                    <p class="contact-desc">Для деловой переписки и официальных вопросов. Ответим в течение 24 часов.</p>
                 </div>
             </div>
 
-            <div style="max-width: 640px; margin: 60px auto 0;">
-                <div class="eyebrow" style="justify-content:center;display:flex;margin-bottom:20px;">Форма обратной связи</div>
+            <div class="divider"></div>
+
+            <div style="max-width: 700px; margin: 40px auto 0;">
+                <div class="eyebrow" style="justify-content:center;display:flex;margin-bottom:20px;">Обратная связь</div>
                 <form class="contact-form" id="contactForm">
                     <input type="text" placeholder="Ваше имя" required>
                     <input type="email" placeholder="Ваш email" required>
                     <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
-                    <button type="submit" class="nav-btn" style="width: 100%; margin-top: 10px;">Отправить</button>
+                    <button type="submit" class="submit-btn">Отправить</button>
                 </form>
             </div>
         </section>
@@ -185,7 +309,7 @@
 </main>
 
 <!-- ФУТЕР -->
-<footer>❀ Eternal Paradise · Ролеплей Проект ❀</footer>
+<footer>❄️ Eternal Paradise · Ролеплей Проект ❄️</footer>
 
 <script src="script.js"></script>
 </body>
