@@ -7,126 +7,186 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Навигация -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="navbar-brand">
-                    <h1 class="logo">Eternal Paradise</h1>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#about" class="nav-link">О проекте</a></li>
-                    <li><a href="#squad" class="nav-link">Отряд</a></li>
-                    <li><a href="#members" class="nav-link">Участники</a></li>
-                    <li><a href="#contact" class="nav-link">Контакты</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Главный баннер -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Добро пожаловать в Eternal Paradise</h2>
-            <p>Ролеплей проект нового поколения</p>
-            <button class="btn btn-primary" onclick="scrollToSection('squad')">Узнать больше</button>
+<!-- ФОНОВЫЕ ЭФФЕКТЫ -->
+<div class="p3-bg">
+    <div class="water-surface"></div>
+    <div class="water-glow"></div>
+    
+    <div class="p3-shard shard-pink" style="left: 15%; top: 60%; --size: 18px; --delay: 0s; --dur: 7s;"></div>
+    <div class="p3-shard shard-blue" style="left: 25%; top: 30%; --size: 24px; --delay: -2s; --dur: 9s;"></div>
+    <div class="p3-shard shard-purple" style="left: 45%; top: 75%; --size: 14px; --delay: -4s; --dur: 6s;"></div>
+    <div class="p3-shard shard-pink" style="left: 65%; top: 20%; --size: 22px; --delay: -1s; --dur: 11s;"></div>
+    <div class="p3-shard shard-blue" style="left: 80%; top: 55%; --size: 16px; --delay: -5s; --dur: 8s;"></div>
+    <div class="p3-shard shard-purple" style="left: 90%; top: 15%; --size: 28px; --delay: -3s; --dur: 12s;"></div>
+</div>
+
+<!-- ХЭДЕР -->
+<header>
+    <div class="brand">
+        <div class="kanji jp-mark">魔</div>
+        <div class="brand-text">
+            <div class="title">Eternal Paradise</div>
+            <div class="sub">エターナル・パラダイス</div>
         </div>
+    </div>
+    <nav>
+        <button class="nav-btn" onclick="switchTab('overview')">Обзор</button>
+        <button class="nav-btn" onclick="switchTab('squad')">Отряд</button>
+        <button class="nav-btn" onclick="switchTab('members')">Участники</button>
+        <button class="nav-btn" onclick="switchTab('contact')">Контакты</button>
+    </nav>
+</header>
+
+<!-- ОСНОВНОЙ КОНТЕНТ -->
+<main>
+    <!-- TAB: OVERVIEW -->
+    <section id="overview-tab" class="tab-content active">
+        <div style="padding-top:60px;text-align:center;position:relative;">
+            <div style="font-family:'Noto Serif JP',serif;font-size:min(38vw,300px);line-height:1;color:var(--cyan);opacity:0.06;position:absolute;top:0px;left:50%;transform:translateX(-50%);pointer-events:none;z-index:0;">∞</div>
+
+            <div class="eyebrow" style="justify-content:center;display:flex;">Ролеплей Проект · Eternal Paradise</div>
+
+            <h1 class="p3-title">
+                <span class="p3-line p3-cyan"><span class="p3-text">ETERNAL</span></span>
+                <span class="p3-line p3-pink"><span class="p3-text">PARADISE</span></span>
+            </h1>
+
+            <p class="section-desc" style="margin:24px auto 0;text-align:center;font-style:normal;">
+                Добро пожаловать в Eternal Paradise — уникальный ролеплей проект нового поколения.
+                Мы создали динамичный мир, где каждый игрок может найти своё место и развивать собственную историю.
+                Проект постоянно развивается благодаря вкладу нашего талантливого сообщества.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <section>
+            <div class="eyebrow">О проекте</div>
+            <div class="p3-textblock p3-textblock-left">
+                Eternal Paradise объединяет игроков со всего мира в единый ролеплей-мир, 
+                где каждая история имеет значение. Мы стремимся создать погружающий опыт, 
+                полный интересных событий и возможностей для развития персонажей.
+            </div>
+        </section>
     </section>
 
-    <!-- О проекте -->
-    <section id="about" class="section about">
-        <div class="container">
-            <h2 class="section-title">О проекте</h2>
-            <div class="about-content">
-                <p>
-                    Eternal Paradise — это уникальный ролеплей проект, объединяющий игроков со всего мира. 
-                    Наш проект создан для того, чтобы предоставить увлекательный и погружающий опыт игры.
+    <!-- TAB: SQUAD -->
+    <section id="squad-tab" class="tab-content">
+        <div style="padding-top:60px;text-align:center;">
+            <div class="eyebrow" style="justify-content:center;display:flex;">Информация об отряде</div>
+            <h1 class="p3-title">
+                <span class="p3-line p3-cyan"><span class="p3-text">СТРАЖИ</span></span>
+                <span class="p3-line p3-pink"><span class="p3-text">ВЕЧНОСТИ</span></span>
+            </h1>
+        </div>
+
+        <div class="divider"></div>
+
+        <section>
+            <div class="forms-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+                <div class="form-card">
+                    <div class="form-head"><strong>Название:</strong> <span id="squadName">Укажите название</span></div>
+                    <p class="form-desc">Официальное наименование вашего отряда в проекте.</p>
+                </div>
+                <div class="form-card">
+                    <div class="form-head"><strong>Уровень:</strong> <span id="squadLevel">N/A</span></div>
+                    <p class="form-desc">Текущий уровень развития отряда в иерархии.</p>
+                </div>
+                <div class="form-card">
+                    <div class="form-head"><strong>Численность:</strong> <span id="squadSize">0</span></div>
+                    <p class="form-desc">Количество активных участников отряда.</p>
+                </div>
+                <div class="form-card">
+                    <div class="form-head"><strong>Рейтинг:</strong> <span id="squadRating">0 / 100</span></div>
+                    <p class="form-desc">Общий рейтинг отряда среди других групп.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section>
+            <div class="eyebrow">Описание отряда</div>
+            <div class="p3-textblock p3-textblock-left" style="max-width: 100%;">
+                <p id="squadDesc" style="margin: 0; line-height: 1.8;">
+                    Элитный отряд, специализирующийся на опасных миссиях. Состоит из самых опытных и преданных воинов проекта. 
+                    Известны своей дисциплиной, мастерством и преданностью идеалам Eternal Paradise.
                 </p>
-                <p>
-                    Мы стремимся создать динамичный мир, где каждый игрок может найти свое место и развивать 
-                    свою историю. Проект постоянно развивается и совершенствуется благодаря вкладу нашего сообщества.
-                </p>
             </div>
-        </div>
+        </section>
     </section>
 
-    <!-- Информация об отряде -->
-    <section id="squad" class="section squad">
-        <div class="container">
-            <h2 class="section-title">Информация об отряде</h2>
-            <div class="squad-grid">
-                <div class="squad-card">
-                    <h3>Название отряда</h3>
-                    <p class="squad-value" id="squadName">Укажите название</p>
-                </div>
-                <div class="squad-card">
-                    <h3>Уровень</h3>
-                    <p class="squad-value" id="squadLevel">N/A</p>
-                </div>
-                <div class="squad-card">
-                    <h3>Численность</h3>
-                    <p class="squad-value" id="squadSize">0</p>
-                </div>
-                <div class="squad-card">
-                    <h3>Рейтинг</h3>
-                    <p class="squad-value" id="squadRating">0 / 100</p>
-                </div>
-            </div>
-            <div class="squad-description">
-                <h3>Описание отряда</h3>
-                <p id="squadDesc">Добавьте описание вашего отряда</p>
-            </div>
+    <!-- TAB: MEMBERS -->
+    <section id="members-tab" class="tab-content">
+        <div style="padding-top:60px;text-align:center;">
+            <div class="eyebrow" style="justify-content:center;display:flex;">Участники отряда</div>
+            <h1 class="p3-title">
+                <span class="p3-line p3-pink"><span class="p3-text">КОМАНДА</span></span>
+            </h1>
         </div>
-    </section>
 
-    <!-- Участники -->
-    <section id="members" class="section members">
-        <div class="container">
-            <h2 class="section-title">Участники отряда</h2>
+        <div class="divider"></div>
+
+        <section>
             <div class="members-grid" id="membersGrid">
                 <!-- Члены отряда будут добавлены здесь JavaScript -->
             </div>
-        </div>
+        </section>
     </section>
 
-    <!-- Контакты -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <h2 class="section-title">Контакты</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Свяжитесь с нами</h3>
-                    <p><strong>Discord:</strong> <span id="discordContact">Не указан</span></p>
-                    <p><strong>Telegram:</strong> <span id="telegramContact">Не указан</span></p>
-                    <p><strong>Email:</strong> <span id="emailContact">Не указан</span></p>
+    <!-- TAB: CONTACT -->
+    <section id="contact-tab" class="tab-content">
+        <div style="padding-top:60px;text-align:center;">
+            <div class="eyebrow" style="justify-content:center;display:flex;">Свяжитесь с нами</div>
+            <h1 class="p3-title">
+                <span class="p3-line p3-cyan"><span class="p3-text">КОНТАКТЫ</span></span>
+            </h1>
+        </div>
+
+        <div class="divider"></div>
+
+        <section>
+            <div class="role-grid">
+                <div class="role-panel">
+                    <h3>Discord</h3>
+                    <ul>
+                        <li><a href="#" id="discordContact">discord.gg/eternalparadise</a></li>
+                        <li>Основной канал связи с командой</li>
+                    </ul>
                 </div>
+                <div class="role-panel">
+                    <h3>Telegram</h3>
+                    <ul>
+                        <li><a href="#" id="telegramContact">@EternalParadiseSquad</a></li>
+                        <li>Быстрая коммуникация в проекте</li>
+                    </ul>
+                </div>
+                <div class="role-panel">
+                    <h3>Email</h3>
+                    <ul>
+                        <li><a href="mailto:squad@eternalparadise.com" id="emailContact">squad@eternalparadise.com</a></li>
+                        <li>Для официальной переписки</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="max-width: 640px; margin: 60px auto 0;">
+                <div class="eyebrow" style="justify-content:center;display:flex;margin-bottom:20px;">Форма обратной связи</div>
                 <form class="contact-form" id="contactForm">
                     <input type="text" placeholder="Ваше имя" required>
                     <input type="email" placeholder="Ваш email" required>
                     <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
-                    <button type="submit" class="btn btn-primary">Отправить</button>
+                    <button type="submit" class="nav-btn" style="width: 100%; margin-top: 10px;">Отправить</button>
                 </form>
             </div>
-        </div>
+        </section>
     </section>
+</main>
 
-    <!-- Футер -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Eternal Paradise. Все права защищены.</p>
-            <div class="social-links">
-                <a href="#" class="social-link">Discord</a>
-                <a href="#" class="social-link">Twitter</a>
-                <a href="#" class="social-link">VK</a>
-            </div>
-        </div>
-    </footer>
+<!-- ФУТЕР -->
+<footer>❀ Eternal Paradise · Ролеплей Проект ❀</footer>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
