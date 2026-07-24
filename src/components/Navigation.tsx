@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { BookOpen, Crown, Users, Star, TrendingUp, ScrollText } from 'lucide-react';
+import { BookOpen, Crown, Users, Star, TrendingUp, ScrollText, Snowflake } from 'lucide-react';
 
 const tabs = [
   { id: 'overview', label: 'Обзор', icon: Crown },
@@ -31,13 +31,13 @@ export default function Navigation({ activeTab, setActiveTab }: NavigationProps)
             whileHover={{ scale: 1.05 }}
             onClick={() => setActiveTab('overview')}
           >
-            <motion.span
-              className="text-2xl"
+            <motion.div
+              className="p-1.5 rounded-lg bg-gradient-to-br from-ice-400/20 to-ice-600/10 border border-ice-400/15"
               animate={{ rotate: [0, 10, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             >
-              ❄️
-            </motion.span>
+              <Snowflake size={20} className="text-ice-300" />
+            </motion.div>
             <span className="font-serif text-lg md:text-xl font-semibold text-ice-100 hidden sm:block">
               Вечный Рай
             </span>
