@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Crown, Users, Star, Sparkles } from 'lucide-react';
+import { Crown, Users, Star, Sparkles, Snowflake } from 'lucide-react';
 
 const stats = [
   { icon: Crown, label: 'Лидер', value: 'Доума', color: 'from-amber-400 to-yellow-600' },
@@ -26,11 +26,6 @@ export default function OverviewSection() {
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-20">
       {/* Hero Background */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/images/hero-bg.jpg"
-          alt=""
-          className="w-full h-full object-cover opacity-30"
-        />
         <div className="absolute inset-0 bg-gradient-to-b from-[#050a1a]/50 via-[#050a1a]/30 to-[#050a1a]" />
         <div className="absolute inset-0 bg-gradient-to-r from-abyss-950/70 via-transparent to-abyss-950/70" />
         {/* Vignette */}
@@ -47,13 +42,14 @@ export default function OverviewSection() {
       >
         {/* Snowflake icon */}
         <motion.div variants={itemVariants} className="mb-8">
-          <motion.span
-            className="text-6xl md:text-8xl inline-block"
+          <motion.div
+            className="inline-flex p-5 md:p-7 rounded-3xl bg-gradient-to-br from-ice-400/10 to-ice-600/5 border border-ice-400/15 shadow-[0_0_60px_rgba(125,180,255,0.1)]"
             animate={{ rotate: 360 }}
             transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+            style={{ animation: 'pulse-glow 4s ease-in-out infinite' }}
           >
-            ❄️
-          </motion.span>
+            <Snowflake size={56} className="text-ice-300 md:w-20 md:h-20" strokeWidth={1.2} />
+          </motion.div>
         </motion.div>
 
         {/* Subtitle */}
