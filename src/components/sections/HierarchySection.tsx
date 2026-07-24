@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
+import { Crown, Star, Eye, Sword, CircleDot } from 'lucide-react';
 
 const hierarchyLevels = [
   {
-    emoji: '👑',
+    icon: Crown,
+    iconColor: 'text-amber-300',
+    iconBg: 'from-amber-500/20 to-yellow-600/15',
     title: 'Лидер Культа',
     desc: 'Доума — абсолютный владыка Вечного Рая. Его воля пронизывает каждый уголок культа, его улыбка — благословение, его слово — непреложный закон.',
     glow: 'from-amber-500/15 via-yellow-500/10 to-amber-500/15',
@@ -11,7 +14,9 @@ const hierarchyLevels = [
     tag: 'АБСОЛЮТНАЯ ВЛАСТЬ',
   },
   {
-    emoji: '⭐',
+    icon: Star,
+    iconColor: 'text-purple-300',
+    iconBg: 'from-purple-500/15 to-indigo-500/10',
     title: 'Апостол',
     desc: 'Правая рука Лидера. Апостолы несут его волю в мир, командуют ритуалами и принимают ключевые решения в его отсутствие.',
     glow: 'from-purple-500/10 via-indigo-500/5 to-purple-500/10',
@@ -20,7 +25,9 @@ const hierarchyLevels = [
     tag: 'ВЫСШИЙ СОВЕТ',
   },
   {
-    emoji: '🔮',
+    icon: Eye,
+    iconColor: 'text-ice-300',
+    iconBg: 'from-ice-500/12 to-cyan-500/8',
     title: 'Наставник',
     desc: 'Хранители знаний и проводники учения. Наставники обучают младших членов, проводят обряды и толкуют священные тексты.',
     glow: 'from-ice-500/8 via-cyan-500/5 to-ice-500/8',
@@ -29,7 +36,9 @@ const hierarchyLevels = [
     tag: 'ДУХОВНОЕ РУКОВОДСТВО',
   },
   {
-    emoji: '🗡️',
+    icon: Sword,
+    iconColor: 'text-ice-300/70',
+    iconBg: 'from-slate-500/10 to-blue-500/5',
     title: 'Служитель',
     desc: 'Верные исполнители воли культа. Служители выполняют задания, охраняют тайны и активно участвуют в жизни организации.',
     glow: 'from-slate-500/5 via-blue-500/3 to-slate-500/5',
@@ -38,7 +47,9 @@ const hierarchyLevels = [
     tag: 'ОПОРА КУЛЬТА',
   },
   {
-    emoji: '🌑',
+    icon: CircleDot,
+    iconColor: 'text-ice-300/50',
+    iconBg: 'from-slate-500/8 to-slate-600/5',
     title: 'Адепт',
     desc: 'Начало пути. Адепт — это тот, кто переступил порог и открыл глаза навстречу свету Вечного Рая. Всё ещё впереди.',
     glow: 'from-slate-500/3 via-slate-500/2 to-slate-500/3',
@@ -116,14 +127,14 @@ export default function HierarchySection() {
                   )}
 
                   <div className="relative z-10 flex items-center gap-4 md:gap-5 w-full">
-                    {/* Emoji */}
-                    <motion.span
-                      className="text-3xl md:text-4xl flex-shrink-0"
+                    {/* Icon */}
+                    <motion.div
+                      className={`flex-shrink-0 p-2.5 md:p-3 rounded-xl bg-gradient-to-br ${level.iconBg} border border-white/5`}
                       animate={isLeader ? { scale: [1, 1.1, 1] } : {}}
                       transition={isLeader ? { duration: 3, repeat: Infinity, ease: 'easeInOut' } : {}}
                     >
-                      {level.emoji}
-                    </motion.span>
+                      <level.icon size={26} className={level.iconColor} strokeWidth={1.5} />
+                    </motion.div>
 
                     {/* Content */}
                     <div className="flex-1 min-w-0">
@@ -141,10 +152,14 @@ export default function HierarchySection() {
                     </div>
 
                     {/* Rank number */}
-                    <div className={`flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center text-xs font-mono ${
-                      isLeader ? 'bg-amber-500/15 text-amber-300/60' : 'bg-ice-400/5 text-ice-300/25'
+                    <div className={`flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center ${
+                      isLeader ? 'bg-amber-500/15' : 'bg-ice-400/5'
                     }`}>
-                      {index === 0 ? '♔' : index + 1}
+                      {index === 0 ? (
+                        <Crown size={14} className="text-amber-300/60" />
+                      ) : (
+                        <span className="text-xs font-mono text-ice-300/25">{index + 1}</span>
+                      )}
                     </div>
                   </div>
                 </motion.div>
