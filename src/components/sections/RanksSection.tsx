@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Flame, Eye, Snowflake, BookOpen, Shield, Gem, Zap } from 'lucide-react';
+import { Flame, Eye, BookOpen, Shield, Gem, Zap, Snowflake, Sparkles, type LucideIcon } from 'lucide-react';
 
 const ranks = [
   {
@@ -75,11 +75,11 @@ const ranks = [
   },
 ];
 
-const ritualPhases = [
-  { icon: '🕯️', title: 'Подготовка', desc: 'Пост и медитация. Очищение разума от земных привязанностей.' },
-  { icon: '❄️', title: 'Испытание', desc: 'Преодоление физического и духовного препятствия, уникального для каждого ранга.' },
-  { icon: '🔮', title: 'Откровение', desc: 'Момент истины — принятие нового знания и осознание своего места в иерархии.' },
-  { icon: '✨', title: 'Вознесение', desc: 'Торжественное объявление нового ранга перед всеми членами культа.' },
+const ritualPhases: { icon: LucideIcon; iconColor: string; title: string; desc: string }[] = [
+  { icon: Flame, iconColor: 'text-amber-400/70', title: 'Подготовка', desc: 'Пост и медитация. Очищение разума от земных привязанностей.' },
+  { icon: Snowflake, iconColor: 'text-cyan-300/70', title: 'Испытание', desc: 'Преодоление физического и духовного препятствия, уникального для каждого ранга.' },
+  { icon: Eye, iconColor: 'text-purple-300/70', title: 'Откровение', desc: 'Момент истины — принятие нового знания и осознание своего места в иерархии.' },
+  { icon: Sparkles, iconColor: 'text-ice-300/70', title: 'Вознесение', desc: 'Торжественное объявление нового ранга перед всеми членами культа.' },
 ];
 
 export default function RanksSection() {
@@ -142,7 +142,11 @@ export default function RanksSection() {
                 whileHover={{ y: -6, scale: 1.03 }}
                 className="glass-light rounded-xl p-4 md:p-5 text-center cursor-default group relative"
               >
-                <span className="text-2xl md:text-3xl block mb-3">{phase.icon}</span>
+                <div className="flex justify-center mb-3">
+                  <div className="p-2.5 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/5">
+                    <phase.icon size={24} className={phase.iconColor} strokeWidth={1.5} />
+                  </div>
+                </div>
                 <h4 className="font-serif font-semibold text-ice-100/80 text-sm md:text-base mb-1.5">{phase.title}</h4>
                 <p className="text-ice-200/30 text-xs leading-relaxed font-sans">{phase.desc}</p>
                 
@@ -185,35 +189,32 @@ export default function RanksSection() {
                         <div className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br ${rank.color} flex items-center justify-center shadow-lg`}>
                           <Icon size={28} className="text-white" />
                         </div>
-                        <span className={`font-serif text-2xl md:text-3xl font-bold ${isLast ? 'text-amber-300/60' : 'text-ice-300/20'}`}>
+                        <span className={`font-serif text-2xl md:text-3xl font-bold ${isLast ? 'text-amber-300/40' : 'text-ice-300/15'} group-hover:text-ice-300/30 transition-colors duration-500`}>
                           {rank.step}
                         </span>
                       </div>
 
                       {/* Right: Content */}
                       <div className="flex-1">
-                        <div className="flex items-start justify-between gap-4 mb-3">
-                          <div>
-                            <h3 className={`font-serif text-xl md:text-2xl font-bold ${isLast ? 'text-amber-200' : 'text-ice-100'}`}>
-                              {rank.title}
-                            </h3>
-                            <p className={`text-xs tracking-wider uppercase mt-1 font-sans ${isLast ? 'text-amber-300/40' : 'text-ice-400/30'}`}>
-                              {rank.ritual}
-                            </p>
-                          </div>
+                        <div className="flex items-center gap-3 mb-2 flex-wrap">
+                          <h3 className={`font-serif text-xl md:text-2xl font-semibold ${isLast ? 'text-shimmer-gold' : 'text-ice-100'}`}>
+                            {rank.title}
+                          </h3>
+                          <span className="text-[10px] tracking-[0.15em] uppercase font-sans px-2.5 py-0.5 rounded-full bg-white/5 text-ice-300/30 border border-white/5">
+                            {rank.ritual}
+                          </span>
                         </div>
-                        
-                        <p className="text-ice-200/40 text-sm md:text-base leading-relaxed mb-5 font-sans">
+                        <p className="text-ice-200/40 text-sm md:text-base leading-relaxed font-sans mb-4 group-hover:text-ice-200/55 transition-colors duration-500">
                           {rank.desc}
                         </p>
 
                         {/* Requirements */}
                         <div className="space-y-2">
-                          <p className="text-ice-300/25 text-xs uppercase tracking-wider font-sans mb-2">Требования:</p>
-                          {rank.requirements.map((req, ri) => (
-                            <div key={ri} className="flex items-start gap-2.5">
-                              <Snowflake size={12} className={`flex-shrink-0 mt-0.5 ${isLast ? 'text-amber-400/40' : 'text-ice-400/25'}`} />
-                              <span className="text-ice-200/50 text-xs md:text-sm font-sans leading-relaxed">{req}</span>
+                          <p className="text-ice-300/25 text-[10px] uppercase tracking-[0.2em] font-sans">Требования:</p>
+                          {rank.requirements.map((req, i) => (
+                            <div key={i} className="flex items-start gap-2.5">
+                              <span className="text-ice-400/20 text-xs mt-0.5">◇</span>
+                              <p className="text-ice-200/35 text-xs md:text-sm leading-relaxed font-sans">{req}</p>
                             </div>
                           ))}
                         </div>
