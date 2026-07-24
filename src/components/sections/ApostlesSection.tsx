@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { Crown, Sparkles, Snowflake } from 'lucide-react';
+import { Crown, Sparkles, Snowflake, Mountain, Gem, type LucideIcon } from 'lucide-react';
 
-const abilities = [
-  { label: 'Титул', value: 'Воплощение Вечного Рая', icon: '🏔️' },
-  { label: 'Способности', value: 'Магия льда и облика, манипуляция жизнью', icon: '❄️' },
-  { label: 'Философия', value: '"Красота — это спасение. Я дарую спасение всем."', icon: '💎' },
+const abilities: { label: string; value: string; icon: LucideIcon; iconColor: string }[] = [
+  { label: 'Титул', value: 'Воплощение Вечного Рая', icon: Mountain, iconColor: 'text-ice-300/60' },
+  { label: 'Способности', value: 'Магия льда и облика, манипуляция жизнью', icon: Snowflake, iconColor: 'text-cyan-300/60' },
+  { label: 'Философия', value: '"Красота — это спасение. Я дарую спасение всем."', icon: Gem, iconColor: 'text-purple-300/60' },
 ];
 
 export default function ApostlesSection() {
@@ -77,7 +77,7 @@ export default function ApostlesSection() {
                     className="glass-light rounded-xl p-5 cursor-default group"
                   >
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="text-lg">{ability.icon}</span>
+                      <ability.icon size={16} className={ability.iconColor} strokeWidth={1.5} />
                       <p className="text-ice-300/30 text-xs uppercase tracking-wider font-sans">{ability.label}</p>
                     </div>
                     <p className="text-ice-100/90 font-serif font-medium text-sm md:text-base leading-relaxed">
@@ -106,41 +106,30 @@ export default function ApostlesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <div className="inline-flex items-center gap-3 glass rounded-full px-8 py-4">
-            <Sparkles size={18} className="text-purple-300/50" />
-            <span className="font-serif text-lg md:text-xl text-ice-200/70">Апостолы — Высший Совет Культа</span>
-            <Sparkles size={18} className="text-purple-300/50" />
-          </div>
-        </motion.div>
-
-        {/* Role of Apostles */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
           className="glass rounded-3xl p-8 md:p-10 relative overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/[0.03] via-transparent to-ice-500/[0.03]" />
+          {/* Decorative sparkle */}
+          <div className="absolute top-4 right-4">
+            <Sparkles size={20} className="text-ice-400/10" />
+          </div>
 
           <div className="relative z-10">
-            <h3 className="font-serif text-xl md:text-2xl font-semibold text-ice-100/90 mb-5">
+            <h3 className="font-serif text-2xl md:text-3xl font-semibold text-ice-100 mb-4">
               Роль Апостолов
             </h3>
-            <p className="text-ice-200/45 leading-relaxed text-sm md:text-base font-sans mb-6">
+            <p className="text-ice-200/40 leading-relaxed text-sm md:text-base font-sans mb-8">
               Апостолы — это избранные служители, каждый из которых обладает уникальным даром и служит определённому аспекту учения.
-              Они распространяют слово о вечном раю, совершают священные обряды и ведут верующих по пути спасения.
+              Они распространяют слово о вечном рае, совершают священные обряды и ведут верующих по пути спасения.
               Каждый апостол — отражение различных аспектов идеального мира, который Доума создаёт.
             </p>
 
             {/* Decorative quote */}
-            <div className="glass-light rounded-xl p-5 border-l-2 border-purple-400/20">
-              <p className="font-serif italic text-ice-200/50 text-sm md:text-base">
+            <div className="glass-warm rounded-xl p-6 inline-block">
+              <p className="font-serif text-base md:text-lg italic text-amber-200/60 leading-relaxed">
                 «Апостол видит мир глазами Лидера. Его руки — продолжение воли Доумы. 
                 Стать Апостолом — значит отдать себя целиком и получить взамен вечность.»
               </p>
+              <p className="mt-3 text-amber-300/25 text-xs font-sans tracking-wider">— СВЯЩЕННЫЙ СВИТОК</p>
             </div>
           </div>
         </motion.div>
