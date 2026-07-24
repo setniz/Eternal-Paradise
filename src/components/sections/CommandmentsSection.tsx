@@ -1,47 +1,55 @@
 import { motion } from 'framer-motion';
+import { Snowflake, Moon, Crown, Flame, Lock, Sparkles, Mountain, type LucideIcon } from 'lucide-react';
 
-const commandments = [
+const commandments: { number: string; title: string; text: string; icon: LucideIcon; iconColor: string }[] = [
   {
     number: 'I',
     title: 'Красота превыше всего',
     text: 'Узрей красоту во всём сущем. Каждая снежинка — произведение искусства, каждый вздох — дар. Стремись к совершенству формы и духа, ибо красота есть единственная истина, неподвластная времени.',
-    symbol: '❄️',
+    icon: Snowflake,
+    iconColor: 'text-cyan-300/60',
   },
   {
     number: 'II',
     title: 'Страдание — иллюзия',
     text: 'Боль и страх — лишь тени, отброшенные несовершенным разумом. Отпусти привязанности к земным тревогам. В Вечном Раю нет места страданию — есть лишь бесконечный покой ледяной тишины.',
-    symbol: '🌙',
+    icon: Moon,
+    iconColor: 'text-indigo-300/60',
   },
   {
     number: 'III',
     title: 'Слово Лидера — закон',
     text: 'Голос Доумы — эхо вселенской гармонии. Его решения не подлежат сомнению, ибо он видит то, что сокрыто от смертных глаз. Следуй за ним — и обретёшь свет.',
-    symbol: '👑',
+    icon: Crown,
+    iconColor: 'text-amber-300/60',
   },
   {
     number: 'IV',
     title: 'Единство через жертву',
     text: 'Отрёкшись от собственного эго, ты становишься частью чего-то большего. Каждая жертва во имя культа — ступень на лестнице вознесения. Чем больше отдаёшь — тем ближе Рай.',
-    symbol: '🔥',
+    icon: Flame,
+    iconColor: 'text-orange-300/60',
   },
   {
     number: 'V',
     title: 'Тайна — священна',
     text: 'Знание, дарованное культом, не предназначено для непосвящённых. Храни обряды в сердце своём, как хранят лёд свою холодную суть. Молчание — твой щит и твоё оружие.',
-    symbol: '🤫',
+    icon: Lock,
+    iconColor: 'text-slate-300/60',
   },
   {
     number: 'VI',
     title: 'Обращай заблудших',
     text: 'Каждая душа заслуживает спасения. Неси свет Вечного Рая в тёмные уголки мира. Не силой, но красотой своего примера привлекай новых искателей на путь истины.',
-    symbol: '✨',
+    icon: Sparkles,
+    iconColor: 'text-ice-300/60',
   },
   {
     number: 'VII',
     title: 'Вечность ждёт терпеливых',
     text: 'Рай не откроется по первому зову. Путь к нему — бесконечная медитация над собой, непрерывное очищение духа. Лишь тот, кто отдаст всё без остатка, войдёт в ледяные врата навсегда.',
-    symbol: '🏔️',
+    icon: Mountain,
+    iconColor: 'text-ice-200/50',
   },
 ];
 
@@ -93,9 +101,11 @@ export default function CommandmentsSection() {
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/[0.02] to-amber-500/0 group-hover:via-amber-500/[0.06] transition-all duration-700" />
                 
                 <div className="relative z-10 flex gap-5 md:gap-8 items-start">
-                  {/* Roman numeral */}
+                  {/* Icon + Roman numeral */}
                   <div className="flex-shrink-0 flex flex-col items-center gap-2">
-                    <span className="text-3xl">{cmd.symbol}</span>
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-amber-500/10 to-amber-600/5 border border-amber-400/10">
+                      <cmd.icon size={24} className={cmd.iconColor} strokeWidth={1.5} />
+                    </div>
                     <span className="font-serif text-2xl md:text-3xl font-bold text-amber-300/30 group-hover:text-amber-300/60 transition-colors duration-500">
                       {cmd.number}
                     </span>
