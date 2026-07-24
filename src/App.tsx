@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Snowflake } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Snowflakes from './components/Snowflakes';
 import AuroraBackground from './components/AuroraBackground';
@@ -63,9 +64,13 @@ export default function App() {
       {/* Footer */}
       <footer className="relative z-10 pb-8 pt-4">
         <div className="text-center">
-          <p className="text-ice-300/10 text-[10px] font-sans tracking-[0.2em] uppercase">
-            ❄ Культ Вечного Рая ❄
-          </p>
+          <div className="flex items-center justify-center gap-2">
+            <Snowflake size={10} className="text-ice-300/10" strokeWidth={1.5} />
+            <p className="text-ice-300/10 text-[10px] font-sans tracking-[0.2em] uppercase">
+              Культ Вечного Рая
+            </p>
+            <Snowflake size={10} className="text-ice-300/10" strokeWidth={1.5} />
+          </div>
           <p className="text-ice-300/8 text-[9px] mt-1.5 font-sans italic">
             Спасение через красоту · Вечность через веру
           </p>
